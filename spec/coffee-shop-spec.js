@@ -20,7 +20,7 @@ describe("CoffeeShop", function() {
   it("should have items", function() {
     coffeeShop = new CoffeeShop();
     coffeeShop.getItems();
-    expect(coffeeShop.items).toEqual({
+    expect(coffeeShop.prices).toEqual({
       "Cafe Latte": 4.75,
       "Flat White": 4.75,
       "Cappucino": 3.85,
