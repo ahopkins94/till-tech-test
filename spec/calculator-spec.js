@@ -30,4 +30,8 @@ describe("Calculator", function() {
     expect(calculator.amountPaid).toEqual(15);
   });
 
+  it("should have an amount of tax to be added to the total", function() {
+    expect(calculator.amountOfTax()).toEqual(2.2);
+  });
+
 });
