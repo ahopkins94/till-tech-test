@@ -18,4 +18,8 @@ describe("Calculator", function() {
     expect(calculator.TAX).toEqual(0.2);
   });
 
+  it("should calculate a total of items", function() {
+    expect(calculator.total()).toEqual(11);
+  });
+
 });
