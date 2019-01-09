@@ -18,4 +18,9 @@ CoffeeShop.prototype.address = function() {
   return this.json[0].address;
 };
 
+CoffeeShop.prototype.number = function() {
+  this._jsonSetUp();
+  return this.json[0].phone;
+};
+
 module.exports = CoffeeShop;
