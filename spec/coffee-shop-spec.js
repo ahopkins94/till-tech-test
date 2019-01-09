@@ -12,4 +12,9 @@ describe("CoffeeShop", function() {
     expect(coffeeShop.address()).toEqual("123 Lakeside Way");
   });
 
+  it("should have a name", function() {
+    coffeeShop = new CoffeeShop();
+    expect(coffeeShop.number()).toEqual("16503600708");
+  });
+
 });
