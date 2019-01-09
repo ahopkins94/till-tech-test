@@ -22,4 +22,8 @@ describe("Calculator", function() {
     expect(calculator.total()).toEqual(11);
   });
 
+  it("should calculate a total of items including tax", function() {
+    expect(calculator.totalIncTax()).toEqual(13.2);
+  });
+
 });
