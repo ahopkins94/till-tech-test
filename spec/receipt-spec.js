@@ -64,4 +64,10 @@ describe("Receipt", function() {
     expect(receipt.calculator.amountPaid).toEqual(20);
   });
 
+  it("should print the details of the coffeeshop's table's order", function() {
+    var formattedItems = receipt.itemsFormat();
+    receipt.getCalculator(20);
+    expect(receipt.display()).toEqual("13/3/2018 08:30:03\n" + receipt.order.coffeeshop.name + "\n" + receipt.order.coffeeshop.address + "\n" + receipt.order.coffeeshop.number + "\n" + formattedItems + "Tax: " + receipt.calculator.amountOfTax + "\nTotal: " + receipt.calculator.totalIncTax + "\nCash: " + receipt.calculator.amountPaid);
+  });
+
 });
