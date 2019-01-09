@@ -26,4 +26,8 @@ describe("Calculator", function() {
     expect(calculator.totalIncTax()).toEqual(13.2);
   });
 
+  it("should have the amount paid", function() {
+    expect(calculator.amountPaid).toEqual(15);
+  });
+
 });
