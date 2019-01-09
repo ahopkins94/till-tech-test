@@ -1,0 +1,22 @@
+{
+  "name": "till-tech-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahopkins94/till-tech-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahopkins94/till-tech-test/issues"
+  },
+  "homepage": "https://github.com/ahopkins94/till-tech-test#readme",
+  "devDependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
