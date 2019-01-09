@@ -14,11 +14,12 @@ Calculator.prototype.total = function() {
 };
 
 Calculator.prototype.totalIncTax = function() {
-  return this._amountOfTax() + this.total();
+  return this.amountOfTax() + this.total();
 };
 
 
-Calculator.prototype._amountOfTax = function() {
+Calculator.prototype.amountOfTax = function() {
   return (this.TAX * this.total());
 };
+
 module.exports = Calculator;
