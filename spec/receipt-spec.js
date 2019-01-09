@@ -59,4 +59,9 @@ describe("Receipt", function() {
     expect(receipt.today).toEqual(Date("Fri Apr 13 2018 08:30:03 GMT+0100 (British Summer Time)"));
   });
 
+  it("should get a calculator", function() {
+    receipt.getCalculator(20);
+    expect(receipt.calculator.amountPaid).toEqual(20);
+  });
+
 });
