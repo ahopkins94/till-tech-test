@@ -1,5 +1,5 @@
 function CoffeeShop() {
-  this.items = [];
+  this.prices = [];
 }
 
 CoffeeShop.prototype._jsonSetUp = function() {
@@ -26,7 +26,7 @@ CoffeeShop.prototype.number = function() {
 CoffeeShop.prototype.getItems = function() {
   this._jsonSetUp();
   var prices = this.json[0].prices[0];
-  this.items = prices;
+  this.prices = prices;
 };
 
 module.exports = CoffeeShop;
