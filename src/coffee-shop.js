@@ -23,4 +23,10 @@ CoffeeShop.prototype.number = function() {
   return this.json[0].phone;
 };
 
+CoffeeShop.prototype.getItems = function() {
+  this._jsonSetUp();
+  var prices = this.json[0].prices[0];
+  this.items = prices;
+};
+
 module.exports = CoffeeShop;
