@@ -13,4 +13,9 @@ describe("Item", function() {
     expect(item.price).toEqual(4.75);
   });
 
+  it("should have a quantity", function() {
+    item = new Item("Cafe Latte", 4.75, 2);
+    expect(item.quantity).toEqual(2);
+  });
+
 });
