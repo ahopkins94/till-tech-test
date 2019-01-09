@@ -51,7 +51,7 @@ describe("Receipt", function() {
      jasmine.clock().uninstall();
    });
 
-  it("should have a coffeeshop", function() {
+  it("should have an order", function() {
     expect(receipt.order).toEqual(order);
   });
 
