@@ -13,4 +13,9 @@ CoffeeShop.prototype.name = function() {
   return this.json[0].shopName;
 };
 
+CoffeeShop.prototype.address = function() {
+  this._jsonSetUp();
+  return this.json[0].address;
+};
+
 module.exports = CoffeeShop;
