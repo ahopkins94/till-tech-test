@@ -55,4 +55,8 @@ describe("Receipt", function() {
     expect(receipt.order).toEqual(order);
   });
 
+  it("should have a date", function() {
+    expect(receipt.today).toEqual(Date("Fri Apr 13 2018 08:30:03 GMT+0100 (British Summer Time)"));
+  });
+
 });
