@@ -16,9 +16,9 @@ describe("Receipt", function() {
      item2.price = 3.75;
      item2.quantity = 1;
      coffeeshop = jasmine.createSpyObj('coffeeshop', ['name', 'address', 'number', 'prices']);
-     coffeeshop.name = 'The Coffee Connection';
-     coffeeshop.address = '123 Lakeside Way';
-     coffeeshop.number = '16503600708';
+     coffeeshop.name = function() { return 'The Coffee Connection'};
+     coffeeshop.address = function() {return '123 Lakeside Way'};
+     coffeeshop.number = function() { return '16503600708'};
      coffeeshop.prices = {
        "Cafe Latte": 4.75,
        "Flat White": 4.75,
@@ -42,8 +42,8 @@ describe("Receipt", function() {
      calculator = jasmine.createSpyObj('calculator', ['order', 'amountPaid', 'totalIncTax', 'amountOfTax', 'new']);
      calculator.order = order;
      calculator.amountPaid = 20;
-     calculator.totalIncTax = 15.9;
-     calculator.amountOfTax = 4.1;
+     calculator.totalIncTax = function() { return 15.9 };
+     calculator.amountOfTax = function() { return 4.1 };
      receipt = new Receipt(order);
    });
 
@@ -67,7 +67,7 @@ describe("Receipt", function() {
   it("should print the details of the coffeeshop's table's order", function() {
     var formattedItems = receipt.itemsFormat();
     receipt.getCalculator(20);
-    expect(receipt.display()).toEqual("13/3/2018 08:30:03\n" + receipt.order.coffeeshop.name + "\n" + receipt.order.coffeeshop.address + "\n" + receipt.order.coffeeshop.number + "\n" + formattedItems + "Tax: " + receipt.calculator.amountOfTax + "\nTotal: " + receipt.calculator.totalIncTax + "\nCash: " + receipt.calculator.amountPaid);
+    expect(receipt.display()).toEqual("13/3/2018 08:30:03\n" + receipt.order.coffeeshop.name() + "\n" + receipt.order.coffeeshop.address() + "\n" + receipt.order.coffeeshop.number() + "\n" + formattedItems + "Tax: " + receipt.calculator.amountOfTax() + "\nTotal: " + receipt.calculator.totalIncTax() + "\nCash: " + receipt.calculator.amountPaid);
   });
 
 });
