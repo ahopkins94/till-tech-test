@@ -18,7 +18,7 @@ Receipt.prototype.itemsFormat = function() {
 };
 
 Receipt.prototype.display = function() {
-  return this._dateFormat() + " " + this._timeFormat() + "\n" + this.order.coffeeshop.name + "\n" + this.order.coffeeshop.address + "\n" + this.order.coffeeshop.number + "\n" + this.itemsFormat() + "Tax: " + this.calculator.amountOfTax + "\nTotal: " + this.calculator.totalIncTax + "\nCash: " + this.calculator.amountPaid;
+  return this._dateFormat() + " " + this._timeFormat() + "\n" + this.order.coffeeshop.name() + "\n" + this.order.coffeeshop.address() + "\n" + this.order.coffeeshop.number() + "\n" + this.itemsFormat() + "Tax: " + this.calculator.amountOfTax() + "\nTotal: " + this.calculator.totalIncTax() + "\nCash: " + this.calculator.amountPaid;
 };
 
 Receipt.prototype._pad = function(number) {
